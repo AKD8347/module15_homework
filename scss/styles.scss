@@ -107,3 +107,40 @@ a:hover, a:focus, a:visited {
   }
 }
 
+.chat {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+  margin: 0 auto;
+  width: 330px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 3px 5px 8px 4px rgb(141,150,178,0.6);
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__field {
+    width: calc(70% - 11px);
+    border: 2px solid #315efb;
+  }
+
+  &__submit {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: #315efb;
+    text-align: center;
+    font-family: $Nunito;
+    color: white;
+    cursor: pointer;
+  }
+}

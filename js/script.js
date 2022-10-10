@@ -7,7 +7,6 @@ iconTrigger.addEventListener('click', () => {
     iconTrigger.classList.toggle('btn__trigger--active');
 });
 
-
 //Задание 2
 //находим кнопку по классу
 const alertTrigger = document.querySelector('.btn__alert');
