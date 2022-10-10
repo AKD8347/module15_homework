@@ -29,6 +29,25 @@ a:hover, a:focus, a:visited {
   width: 100%;
   padding: 15px;
   box-sizing: border-box;
+
+  &__element {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #000;
+  }
+
+  &__title {
+    width: 100%;
+    font-size: 20px;
+    font-family: $Nunito;
+    color: black;
+
+
+  }
 }
 
 .btn {

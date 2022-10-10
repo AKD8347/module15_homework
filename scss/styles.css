@@ -30,6 +30,21 @@ a:hover, a:focus, a:visited {
   padding: 15px;
   box-sizing: border-box;
 }
+.wrapper__element {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #000;
+}
+.wrapper__title {
+  width: 100%;
+  font-size: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  color: black;
+}
 
 .btn {
   padding: 0;
