@@ -116,6 +116,13 @@ a:hover, a:focus, a:visited {
 .chat__field {
   width: calc(70% - 11px);
   border: 2px solid #315efb;
+  font-size: 14px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+.chat__field:focus-visible {
+  outline: none;
+  border-color: #315efb;
 }
 .chat__submit {
   width: 30%;
@@ -128,6 +135,34 @@ a:hover, a:focus, a:visited {
   font-family: "Nunito Sans", sans-serif;
   color: white;
   cursor: pointer;
+  font-size: 14px;
+}
+.chat__history {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid #315efb;
+  border-radius: 5px;
+  margin-top: 15px;
+  height: 330px;
+  overflow-y: scroll;
+}
+.chat__msg {
+  position: relative;
+  float: right;
+  max-width: 80%;
+  height: auto;
+  border: 2px solid #315efb;
+  border-radius: 30px;
+  color: black;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 15px;
+  margin-bottom: 5px;
+}
+.chat__msg--answer {
+  float: left;
 }
 
 /*# sourceMappingURL=styles.css.map */

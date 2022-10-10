@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
 $Nunito: 'Nunito Sans', sans-serif;
 html,
 body {
@@ -16,11 +17,12 @@ body {
 a {
   text-decoration: none;
 }
+
 a:hover, a:focus, a:visited {
   text-decoration: none;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -66,7 +68,7 @@ a:hover, a:focus, a:visited {
   transition: 0.3s;
 
   &:hover {
-    box-shadow: 0px 2px 8px 2px rgba(141,150,178,.3);
+    box-shadow: 0px 2px 8px 2px rgba(141, 150, 178, .3);
     transform: scale(1.05);
   }
 
@@ -116,7 +118,7 @@ a:hover, a:focus, a:visited {
   width: 330px;
   padding: 15px;
   border-radius: 5px;
-  box-shadow: 3px 5px 8px 4px rgb(141,150,178,0.6);
+  box-shadow: 3px 5px 8px 4px rgb(141, 150, 178, 0.6);
 
   &__top {
     display: flex;
@@ -129,6 +131,14 @@ a:hover, a:focus, a:visited {
   &__field {
     width: calc(70% - 11px);
     border: 2px solid #315efb;
+    font-size: 14px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+
+    &:focus-visible {
+      outline: none;
+      border-color: #315efb;
+    }
   }
 
   &__submit {
@@ -142,5 +152,36 @@ a:hover, a:focus, a:visited {
     font-family: $Nunito;
     color: white;
     cursor: pointer;
+    font-size: 14px;
+  }
+
+  &__history {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #315efb;
+    border-radius: 5px;
+    margin-top: 15px;
+    height: 330px;
+    overflow-y: scroll;
+  }
+
+  &__msg {
+    position: relative;
+    float: right;
+    max-width: 80%;
+    height: auto;
+    border: 2px solid #315efb;
+    border-radius: 30px;
+    color: black;
+    font-family: $Nunito;
+    padding: 15px;
+    margin-bottom: 5px;
+
+    &--answer {
+      float: left;
+    }
   }
 }
