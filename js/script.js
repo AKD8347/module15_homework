@@ -120,8 +120,7 @@ const success = (position) => {
     }
     writeGeo(myPosition);
 }
-
-
+//при клике на кнопку  определения гео-локации
 getGeo.addEventListener('click', ()=>{
     if (!navigator.geolocation) {
        window.alert('Geolocation не поддерживается вашим браузером');
