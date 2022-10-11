@@ -115,7 +115,7 @@ a:hover, a:focus, a:visited {
   flex-direction: row;
   position: relative;
   margin: 0 auto;
-  width: 330px;
+  width: 440px;
   padding: 15px;
   border-radius: 5px;
   box-shadow: 3px 5px 8px 4px rgb(141, 150, 178, 0.6);
@@ -129,7 +129,7 @@ a:hover, a:focus, a:visited {
   }
 
   &__field {
-    width: calc(70% - 11px);
+    width: calc(100% - (11px + 180px));
     border: 2px solid #315efb;
     font-size: 14px;
     padding: 5px 10px;
@@ -142,7 +142,21 @@ a:hover, a:focus, a:visited {
   }
 
   &__submit {
-    width: 30%;
+    width: 110px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: #315efb;
+    text-align: center;
+    font-family: $Nunito;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  &__geo {
+    width: 70px;
     padding: 10px;
     box-sizing: border-box;
     border: none;
@@ -185,6 +199,11 @@ a:hover, a:focus, a:visited {
       color: white;
       margin-left:0;
       margin-right: auto;
+    }
+
+    &--geo {
+      background-color: #315efb;
+      color: white;
     }
   }
 }

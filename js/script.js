@@ -27,10 +27,14 @@ const output = document.getElementById("output");
 const field = document.querySelector('.chat__field');
 //кнопака отправки сообщения на сервер
 const sendMsg = document.querySelector('.chat__submit');
+//кнопка отправки гео-локации
+const getGeo = document.querySelector('.chat__geo');
 //url эхо-сервера
 const webSocUri = 'wss://echo-ws-service.herokuapp.com';
 //переменная для вэбсокета
 let websocket;
+//переменная для гео-локации
+const geoUri = 'https://www.openstreetmap.org/'
 //функция записи отправленного сообщения
 function writeMy(message) {
     //в созданный тег p
@@ -52,6 +56,21 @@ function writeResponse(message) {
     pre.innerHTML = message;
     //заполненный элемент добавляем в поле сообщений
     output.appendChild(pre);
+}
+
+function writeGeo(location) {
+    //в созданный тег a
+    let link = document.createElement("a");
+    //добавляем нужный класс
+    link.classList.add('chat__msg', 'chat__msg--geo');
+    //добавляем ссылку
+    link.href = location.href;
+    //добавляем атрибут _blank
+    link.target = '_blank';
+    //добавляем текст
+    link.textContent = location.message;
+    //заполненный элемент добавляем в поле сообщений
+    output.appendChild(link);
 }
 //при загрузке страницы
 document.addEventListener("DOMContentLoaded", function () {
@@ -84,5 +103,29 @@ sendMsg.addEventListener('click', () => {
     } else {
         //если пустое - ничего не отправляется
         event.preventDefault();
+    }
+});
+
+// Функция, выводящая текст об ошибке
+const error = () => {
+    window.alert('Невозможно получить ваше местоположение');
+}
+
+// Функция, срабатывающая при успешном получении геолокации
+const success = (position) => {
+    console.log('position', position);
+    let myPosition = {
+        message: 'Гео-локация',
+        href: `https://www.openstreetmap.org/#map=18/${position.coords.latitude}/${position.coords.longitude}`
+    }
+    writeGeo(myPosition);
+}
+
+
+getGeo.addEventListener('click', ()=>{
+    if (!navigator.geolocation) {
+       window.alert('Geolocation не поддерживается вашим браузером');
+    } else {
+        navigator.geolocation.getCurrentPosition(success, error);
     }
 })

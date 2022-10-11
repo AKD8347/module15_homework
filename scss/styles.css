@@ -101,7 +101,7 @@ a:hover, a:focus, a:visited {
   flex-direction: row;
   position: relative;
   margin: 0 auto;
-  width: 330px;
+  width: 440px;
   padding: 15px;
   border-radius: 5px;
   box-shadow: 3px 5px 8px 4px rgba(141, 150, 178, 0.6);
@@ -114,7 +114,7 @@ a:hover, a:focus, a:visited {
   width: 100%;
 }
 .chat__field {
-  width: calc(70% - 11px);
+  width: calc(100% - 191px);
   border: 2px solid #315efb;
   font-size: 14px;
   padding: 5px 10px;
@@ -125,7 +125,20 @@ a:hover, a:focus, a:visited {
   border-color: #315efb;
 }
 .chat__submit {
-  width: 30%;
+  width: 110px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background-color: #315efb;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+.chat__geo {
+  width: 70px;
   padding: 10px;
   box-sizing: border-box;
   border: none;
@@ -166,6 +179,10 @@ a:hover, a:focus, a:visited {
   color: white;
   margin-left: 0;
   margin-right: auto;
+}
+.chat__msg--geo {
+  background-color: #315efb;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
