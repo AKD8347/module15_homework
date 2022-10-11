@@ -106,12 +106,12 @@ sendMsg.addEventListener('click', () => {
     }
 });
 
-// Функция, выводящая текст об ошибке
+//вывод текст об ошибке
 const error = () => {
     window.alert('Невозможно получить ваше местоположение');
 }
 
-// Функция, срабатывающая при успешном получении геолокации
+//при успешном получении геолокации
 const success = (position) => {
     console.log('position', position);
     let myPosition = {
